@@ -19,5 +19,9 @@ docker compose -f docker-compose.production.yml up --build -d
 
 
 docker build -t andrewfowl/chatgpt-fastapi:1.0.0 .
-docker login
+docker login -u andrewfowl
 docker push andrewfowl/chatgpt-fastapi:1.0.0
+
+docker build -t andrewfowl/chatgpt-fastapi:1.0.1 .
+docker login -u andrewfowl
+docker push andrewfowl/chatgpt-fastapi:1.0.1
