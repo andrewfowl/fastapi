@@ -2,9 +2,9 @@ python3 -m venv env
 cd env/Scripts && activate 
 cd ../.. && pip install fastapi uvicorn
 
-uvicorn main:app --reload --port=8000 --host=0.0.0.0
-127.0.0.1:8000
-127.0.0.1:8000/docs
+uvicorn main:app --reload --port=8080 --host=0.0.0.0
+127.0.0.1:8080
+127.0.0.1:8080/docs
 ctrl+c
 
 pip freeze > requirements.txt
@@ -17,6 +17,9 @@ docker compose -f docker-compose.development.yml up
 docker compose -f docker-compose.staging.yml up --build
 docker compose -f docker-compose.production.yml up --build -d
 
+
+docker build ./ 
+docker run -p 8080:8080 01ecc4969ede
 
 docker build -t andrewfowl/chatgpt-fastapi:1.0.0 .
 docker login -u andrewfowl
