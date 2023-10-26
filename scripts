@@ -10,4 +10,14 @@ ctrl+c
 pip freeze > requirements.txt
 deactivate
 
-docker compose up --build
+docker compose up
+
+
+docker compose -f docker-compose.development.yml up
+docker compose -f docker-compose.staging.yml up --build
+docker compose -f docker-compose.production.yml up --build -d
+
+
+docker build -t andrewfowl/chatgpt-fastapi:1.0.0 .
+docker login
+docker push andrewfowl/chatgpt-fastapi:1.0.0
