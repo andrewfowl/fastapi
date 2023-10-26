@@ -13,13 +13,13 @@ deactivate
 docker compose up
 
 
-docker compose -f docker-compose.development.yml up
-docker compose -f docker-compose.staging.yml up --build
-docker compose -f docker-compose.production.yml up --build -d
+docker compose -f docker-compose.development.yaml up
+docker compose -f docker-compose.staging.yaml up --build
+docker compose -f docker-compose.production.yaml up --build -d
 
 
 docker build ./ 
-docker run -p 8000:8000 01ecc4969ede
+docker run -p 8000:8000 92855edcafbc
 
 docker build -t andrewfowl/chatgpt-fastapi:1.0.0 .
 docker login -u andrewfowl
