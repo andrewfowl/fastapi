@@ -13,4 +13,4 @@ def index():
     Returns:
         _type_: _description_
     """
-    return {"details": f"Hello World! Secret = {env['MY_VARIABLE']}"}
+    return {"details": f"Hello World! Secret = {env['MY_ENVIRONMENT']}"}
