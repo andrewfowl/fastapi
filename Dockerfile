@@ -13,7 +13,7 @@ RUN python -m pip install -r requirements.txt
 #copy local code to the container
 COPY . .
 
-#EXPOSE 8000
+EXPOSE 8000
 
 # Creates a non-root user with an explicit UID and adds permission to access the /app folder
 # For more info, please refer to https://aka.ms/vdockerscode-docker-python-configure-containers

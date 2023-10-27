@@ -21,7 +21,7 @@ docker compose -f docker-compose.production.yaml up --build -d
 docker build ./ 
 docker run -p 8000:8000 92855edcafbc
 
-docker build -t andrewfowl/chatgpt-fastapi:1.0.0 .
+docker build -t andrewfowl/chatgpt-fastapi:2.0.0 .
 docker login -u andrewfowl
 docker push andrewfowl/chatgpt-fastapi:1.0.0
 
