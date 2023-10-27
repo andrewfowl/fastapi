@@ -8,7 +8,7 @@ ENV HOST 0.0.0.0
 
 # Install pip requirements
 COPY requirements.txt .
-RUN python -m pip install -r requirements.txt
+RUN pip install -r requirements.txt
 
 #copy local code to the container
 COPY . .
